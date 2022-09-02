@@ -1,0 +1,18 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: |
+  This temp launches an ec2 instance. 
+  
+  
+Resources:
+  denemecfntemp:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-05fa00d4c63e32376
+      InstanceType: t2.micro
+      KeyName: firstkey
+      SecurityGroups:
+        - http-ssh-security-group
+      Tags:
+        - Key : Name
+          Value : cloudtemplate
+        
